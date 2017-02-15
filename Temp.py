@@ -10,7 +10,7 @@ print('Reading Data ------------')
 
 
 # Load Data
-File_name = 2
+File_name = 1
 pay_filename = "%d_pay_day_num.txt" % File_name
 pay_data = pd.read_csv(pay_filename,names = ['ID','Pay_Times','Date'])
 data_all = pay_data.iloc[:,1].values.astype('float64')
