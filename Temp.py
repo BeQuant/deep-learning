@@ -10,7 +10,7 @@ print('Reading Data ------------')
 
 
 # Load Data
-File_name = 4
+File_name = 2
 pay_filename = "%d_pay_day_num.txt" % File_name
 pay_data = pd.read_csv(pay_filename,names = ['ID','Pay_Times','Date'])
 data_all = pay_data.iloc[:,1].values.astype('float64')
@@ -21,7 +21,7 @@ data_max = np.max(data_all)
 data_all = (data_all - data_min)/ (data_max-data_min)
 
 data = []
-sequence_length = 4
+sequence_length = 2
 
 
 for i in range(len(data_all) - sequence_length - 1):
